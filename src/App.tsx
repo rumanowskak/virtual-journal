@@ -4,7 +4,7 @@ import StartPage from './components/StartPage/StartPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <StartPage/>
     </div>
   );
