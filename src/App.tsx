@@ -3,6 +3,7 @@ import './App.css';
 import EmailPage from './components/RegisterPages/EmailPage';
 import RegisterPage from './components/RegisterPages/RegisterPage';
 import StartPage from './components/StartPage/StartPage';
+import HomePage from './components/HomePage/HomePage';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <StartPage/>
       {/* <EmailPage/> */}
       {/* <RegisterPage/> */}
+      {/* <HomePage/> */}
     </div>
   );
 }
