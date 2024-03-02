@@ -1,4 +1,5 @@
 import '../../css/StartPage/StartPage.css'
+import { Link } from 'react-router-dom'
 
 function StartPage() {
     return (
@@ -10,11 +11,13 @@ function StartPage() {
         </div>
         <div className='start-page-book-background'>
             <div className='start-page-book'>
+                <Link to="/email" className='link'>
                 <div className='start-page-book-cover'>
                     <div className='start-page-book-cover-title'>
                         Let's start
                     </div>
                 </div>
+                </Link>
             </div>
         </div>
       </div>
