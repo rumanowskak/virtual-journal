@@ -147,3 +147,8 @@
     font-size: 40px;
     text-decoration: underline solid 1px #D5AD6D;
 }
+
+
+.start-page .start-page-book-background .start-page-book .link{
+    text-decoration: none;
+}
