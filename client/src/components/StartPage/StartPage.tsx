@@ -10,15 +10,15 @@ function StartPage() {
             <div className='start-page-text-right'>Journal</div>
         </div>
         <div className='start-page-book-background'>
-            <div className='start-page-book'>
-                <Link to="/email" className='link'>
-                <div className='start-page-book-cover'>
-                    <div className='start-page-book-cover-title'>
-                        Let's start
+            <Link to="/email" className='link'>
+                <div className='start-page-book'>
+                    <div className='start-page-book-cover'>
+                        <div className='start-page-book-cover-title'>
+                            Let's start
+                        </div>
                     </div>
                 </div>
-                </Link>
-            </div>
+            </Link>
         </div>
       </div>
     );
