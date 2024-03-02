@@ -1,7 +1,10 @@
 import '../../css/StartPage/StartPage.css'
 import { Link } from 'react-router-dom'
 
+
+
 function StartPage() {
+
     return (
       <div className="start-page">
         <div className='start-page-text'>
