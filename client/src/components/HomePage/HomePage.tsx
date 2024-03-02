@@ -1,7 +1,11 @@
 import '../../css/HomePage/HomePage.css'
 import AddNewEntryPanel from './AddNewEntryPanel';
+import { UserState } from '../../atoms/User';
+import { useRecoilValue } from 'recoil';
 
 function HomePage() {
+
+    const user = useRecoilValue(UserState);
 
     function getDate() {
         const today = new Date();
@@ -37,7 +41,7 @@ function HomePage() {
                     {getDate()}
                 </div>
                 <div className='home-page-header-title'>
-                    Hello Jane
+                    Hello {user.username}
                 </div>
             </div>
         </div>

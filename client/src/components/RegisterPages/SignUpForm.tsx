@@ -57,7 +57,7 @@ function loginAfterSignUp() {
       return res.json()
     })
     .then((data)=>{
-      setUser(data);
+      setUser(data.user);
     })
     .catch((error) => {
       console.log(error);

@@ -1,7 +1,8 @@
 import '../../css/RegisterPages/LogInForm.css'
 
 import { useState } from "react";
-import { useSetRecoilState } from 'recoil';
+import { useSetRecoilState} from 'recoil';
+
 
 import { UserState } from '../../atoms/User';
 import { useNavigate } from 'react-router';
@@ -33,8 +34,18 @@ function LogInForm() {
       return res.json()
     })
     .then((data)=>{
-      console.log(data);
-      setUser(data);
+
+
+      setUser(
+        // {
+        //   id: data.user.id,
+        //   email: data.user.email,
+        //   password:data.user.password,
+        //   username: data.user.username
+        // }
+        data.user
+      );
+      // console.log('user in login ' + user);
       navigate('/home');
     })
     .catch((error) => {
