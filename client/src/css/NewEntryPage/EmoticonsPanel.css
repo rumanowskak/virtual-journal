@@ -1,0 +1,55 @@
+.emoticons-panel{
+    height: 90%;
+    width: 100%;
+    background-color: #002045;
+    border-radius: 50px;
+    color: white;
+    padding: 2%;
+}
+
+.emoticons-panel .mood-panel
+{
+    width: 100%;
+    height: 50%;
+}
+
+
+.emoticons-panel .mood-panel .mood-panel-title
+{
+    width: 100%;
+    height: 20%;
+    font-size: 26px;
+    font-family: 'Gotham Medium';
+}
+
+
+.emoticons-panel .mood-panel .mood-panel-emoticons-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+}
+
+
+.emoticons-panel .emotions-panel
+{
+    width: 100%;
+    height: 50%;
+}
+
+.emoticons-panel .emotions-panel .emotions-panel-title
+{
+    width: 100%;
+    height: 20%;
+    font-size: 26px;
+    font-family: 'Gotham Medium';
+}
+
+.emoticons-panel .emotions-panel .emotions-panel-emoticons-container
+{
+    width: 100%;
+    height: 80%;
+    display: flex;
+
+}

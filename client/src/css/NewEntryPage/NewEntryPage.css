@@ -1,0 +1,296 @@
+.new-entry-page
+{
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 300px 300px 500px 300px 400px ;
+    grid-template-columns: 5% 45% 45% 5%;
+    row-gap: 3%;
+}
+
+.new-entry-page .new-entry-page-title
+{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% 20% 50% 20%;
+    grid-template-columns: 100%;
+    color: #6B6B6B;
+}
+
+.new-entry-page .new-entry-page-title .date-field
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 30px;
+    font-family: 'Gotham Medium';
+}
+
+.new-entry-page .new-entry-page-title .title-field
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 70px;
+    font-family: 'Gotham Bold';
+
+}
+
+.new-entry-page .top-priorites-panel
+{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    height: 100%;
+    width: 100%;
+    color: #6B6B6B;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 5% 20% 70% 5%;
+}
+
+.new-entry-page .top-priorites-panel .top-priorities-panel-title
+{
+    height: 100%;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    font-family: 'Gotham Medium';
+
+}
+
+.new-entry-page .top-priorites-panel .top-priorities
+{
+    height: 100%;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-family: 'Gotham Light';
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+}
+
+.new-entry-page .gratitude-panel
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 100%;
+    width: 100%;
+    color: #6B6B6B;
+    font-size: 30px;
+}
+
+.new-entry-page .gratitude-panel .gratitude-panel-title
+{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    font-family: 'Gotham Medium';
+
+}
+
+.new-entry-page .gratitude-panel .gratitude-items-list
+{
+    height: 80%;
+    font-family: 'Gotham Light';
+}
+
+.new-entry-page .gratitude-panel .gratitude-items-list
+{
+    height: 80%;
+    font-family: 'Gotham Light';
+    padding: 2%;
+}
+
+.new-entry-page .gratitude-panel .gratitude-items-list .gratitude-item
+{
+    width: 90%;
+    height: 33%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.new-entry-page .gratitude-panel .gratitude-items-list .gratitude-item input
+{
+    position: absolute;
+    left: 30px;
+    border:0px;
+    border-bottom: 1px solid  #6B6B6B;
+    width: 60%;
+    color: #6B6B6B;
+    font-family: 'Gotham Light';
+    font-size: 20px;
+    text-overflow: ellipsis;
+}
+
+.new-entry-page .gratitude-panel .gratitude-items-list .gratitude-item input:focus
+{
+    border:0px;
+    border-bottom: 1px solid  #6B6B6B;
+    outline: none;
+}
+
+
+.new-entry-page .notes-panel
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    height: 100%;
+    width: 100%;
+    color: #6B6B6B;
+    font-size: 30px;
+}
+
+
+.new-entry-page .notes-panel .notes-panel-title
+{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-family: 'Gotham Medium';
+
+}
+
+.new-entry-page .notes-panel .notes
+{
+    height: 90%;
+    font-family: 'Gotham Light';
+    display: flex;
+    align-items:end;
+    position: relative;
+
+}
+
+.new-entry-page .notes-panel .notes textarea{
+    width: 500px;
+    height: 90%;
+    -webkit-box-shadow: 8px 11px 13px -7px rgba(74, 74, 79, 1);
+    -moz-box-shadow: 8px 11px 13px -7px rgba(74, 74, 79, 1);
+    box-shadow: 8px 11px 13px -7px rgba(74, 74, 79, 1);
+}
+
+.new-entry-page .notes-panel .notes img{
+    position: absolute;
+    top:0;
+    left: 490px;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+
+.new-entry-page .emoticons-panel-container
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.new-entry-page .tasks-panel
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 100%;
+    width: 100%;
+    color: #6B6B6B;
+    font-size: 30px;
+}
+
+.new-entry-page .tasks-panel .tasks-panel-title
+{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-family: 'Gotham Medium';
+
+}
+
+.new-entry-page .tasks-panel .tasks
+{
+    height: 90%;
+    font-family: 'Gotham Light';
+
+}
+
+.new-entry-page .food-panel-container
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.new-entry-page .exercise-panel-container
+{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.new-entry-page .exercise-panel-container .exercise-panel
+{
+    height: 80%;
+    width: 80%;
+    -webkit-box-shadow: inset 0px 0px 19px 0px rgba(74, 74, 79, 1);
+    -moz-box-shadow: inset 0px 0px 19px 0px rgba(74, 74, 79, 1);
+    box-shadow: inset 0px 0px 19px 0px rgba(74, 74, 79, 1);
+    border-radius: 50px;
+}
+
+.new-entry-page .exercise-panel-container .exercise-icon
+{
+    height: 80%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-entry-page .exercise-panel-container .exercise-icon img
+{
+    width: 150px;
+    height: 150px;
+}
+
