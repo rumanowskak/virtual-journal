@@ -1,0 +1,91 @@
+.food-panel
+{
+    width: 100%;
+    height: 100%;
+    background-color: #E7F0D6;
+    border-radius: 50px;
+    color: #6B6B6B;
+    font-size: 30px;
+    padding: 3%;
+
+}
+
+
+.food-panel .food-panel-title
+{
+    font-family: 'Gotham Medium';
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.food-panel .meal-section
+{
+    font-family: 'Gotham Light';
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.food-panel .meal-section .meal-section-title
+{
+    font-size: 25px;
+    width: 30%;
+}
+
+.food-panel .meal-section .meal
+{
+    width: 70%;
+}
+
+
+.food-panel .meal-section .meal input
+{
+    border:0px;
+    border-bottom: 1px solid  #6B6B6B;
+    width: 90%;
+    color: #6B6B6B;
+    font-family: 'Gotham Light';
+    font-size: 20px;
+    text-overflow: ellipsis;
+    background-color: #E7F0D6;
+}
+
+.food-panel .meal-section .meal input:focus
+{
+    border:0px;
+    border-bottom: 1px solid  #6B6B6B;
+    outline: none;
+
+}
+
+
+.food-panel .water-section
+{
+    font-family: 'Gotham Light';
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+
+}
+
+.food-panel .water-section .water-section-title
+{
+    width: 30%;
+    font-size: 25px;
+}
+
+.food-panel .water-section .water-glasses
+{
+    width: 70%;
+    display: flex;
+}
+
+.food-panel .water-section .water-glasses img
+{
+    width: 50px;
+    height: 50px;
+}
