@@ -3,6 +3,8 @@ import YogaIcon from '../../assets/images/yoga.png'
 import PinIcon from '../../assets/images/pin.png'
 import EmoticonsPanel from './EmoticonsPanel';
 import FoodPanel from './FoodPanel';
+import ExercisePanel from './ExercisePanel';
+import Checkbox from './Checkbox';
 
 function NewEntryPage() {
 
@@ -37,7 +39,7 @@ function NewEntryPage() {
                 {getDate()}
             </div>
             <div className='title-field'>
-                Todays' entry
+                Today's entry
             </div>
         </div>
         <div className='top-priorites-panel'>
@@ -45,7 +47,15 @@ function NewEntryPage() {
                 Top priorities:
             </div>
             <div className='top-priorities'>
-
+                <div className='priority'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='priority'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='priority'>
+                    <Checkbox customLabel={true}/>
+                </div>
             </div>
         </div>
         <div className='gratitude-panel'>
@@ -82,7 +92,24 @@ function NewEntryPage() {
                 Tasks for today:
             </div>
             <div className='tasks'>
-
+                <div className='task'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='task'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='task'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='task'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='task'>
+                    <Checkbox customLabel={true}/>
+                </div>
+                <div className='task'>
+                    <Checkbox customLabel={true}/>
+                </div>
             </div>
         </div>
         <div className='food-panel-container'>
@@ -90,7 +117,7 @@ function NewEntryPage() {
         </div>
         <div className='exercise-panel-container'>
             <div className='exercise-panel'>
-
+                <ExercisePanel/>
             </div>
             <div className='exercise-icon'>
                 <img src={YogaIcon}></img>

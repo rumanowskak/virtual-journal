@@ -54,7 +54,7 @@
     color: #6B6B6B;
     font-size: 30px;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: 5% 20% 70% 5%;
 }
 
@@ -76,9 +76,18 @@
     height: 100%;
     grid-row-start: 3;
     grid-row-end: 4;
-    font-family: 'Gotham Light';
     grid-column-start: 2;
     grid-column-end: 3;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    padding-top: 5%;
+
+}
+
+.new-entry-page .top-priorites-panel .top-priorities .priority
+{
+    display: flex;
+    align-items: center;
 
 }
 
@@ -156,6 +165,7 @@
     width: 100%;
     color: #6B6B6B;
     font-size: 30px;
+    padding-left: 26%;
 }
 
 
@@ -236,8 +246,16 @@
 .new-entry-page .tasks-panel .tasks
 {
     height: 90%;
-    font-family: 'Gotham Light';
+    display: grid;
+    grid-template-rows: 16% 16% 16% 16% 16% 16%;
+    padding-top: 5%;
+}
 
+.new-entry-page .tasks-panel .tasks .task
+{
+    display: flex;
+    align-items: center;
+    width: 65%;
 }
 
 .new-entry-page .food-panel-container
@@ -271,12 +289,11 @@
 
 .new-entry-page .exercise-panel-container .exercise-panel
 {
-    height: 80%;
-    width: 80%;
-    -webkit-box-shadow: inset 0px 0px 19px 0px rgba(74, 74, 79, 1);
-    -moz-box-shadow: inset 0px 0px 19px 0px rgba(74, 74, 79, 1);
-    box-shadow: inset 0px 0px 19px 0px rgba(74, 74, 79, 1);
-    border-radius: 50px;
+    width: 90%;
+    height:90%;
+    display: flex;
+    align-items: center;
+ 
 }
 
 .new-entry-page .exercise-panel-container .exercise-icon
