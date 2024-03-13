@@ -13,12 +13,15 @@ import TenIcon from '../../assets/images/love.png'
 
 interface MoodInterface
 {
-    number:string
+    number:string,
+    data:any,
+    setData:Function,
 }
 
-function Mood({number}:MoodInterface) {
+function Mood({number, data, setData}:MoodInterface) {
 
     const [emoticon, setEmoticon] = useState("");
+    const [name, setName] = useState("mood-icon-unchecked");
 
 
     useEffect(()=>{
@@ -58,10 +61,28 @@ function Mood({number}:MoodInterface) {
         }
     },[])
 
+    function handleSetMood()
+    {
+        if(name=="mood-icon-unchecked")
+        {
+            setData({...data,mood:emoticon});
+            setName("mood-icon-checked");
+        }else
+        {
+            setData({...data,mood:''});
+            setName("mood-icon-unchecked")
+
+        }
+        console.log(name);
+        console.log(number);
+    }
+
     return (
-      <div className="mood">
-        <div className='mood-icon'>
-            <img src={emoticon}></img>
+      <div className="mood" key={number}>
+        <div className={name}>
+            <button onClick={handleSetMood} type="button">
+                <img src={emoticon}></img>
+            </button>
         </div>
         <div className='mood-number'>
             {number}

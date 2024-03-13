@@ -3,7 +3,7 @@
     height: 100%;
 }
 
-.emotion .emotion-icon
+.emotion .emotion-icon-unchecked
 {
     width: 100%;
     height: 60%;
@@ -12,7 +12,16 @@
     justify-content: center;
 }
 
-.emotion .emotion-icon:hover::before
+.emotion .emotion-icon-checked
+{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emotion .emotion-icon-unchecked:hover::before
 {
     background-color: #FFFFFF;
     opacity: 0.3;
@@ -24,12 +33,31 @@
     height: 70px;
 }
 
-.emotion .emotion-icon img{
+
+.emotion .emotion-icon-checked::before
+{
+    background-color: #FFFFFF;
+    opacity: 0.3;
+    border-radius: 20px;
+    content:"";
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+
+
+.emotion .emotion-icon-unchecked img{
     z-index: 2;
     width: 50px;
     height: 50px;
 }
 
+.emotion .emotion-icon-checked img{
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+}
 .emotion .emotion-description
 {
     width: 100%;
@@ -38,4 +66,19 @@
     align-items: center;
     justify-content: center;
     font-size: 22px;
+}
+
+
+.emotion .emotion-icon-checked button
+{
+    background-color: transparent;
+    border:none;
+    z-index:1;
+}
+
+.emotion .emotion-icon-unchecked button
+{
+    background-color: transparent;
+    border:none;
+    z-index:1;
 }

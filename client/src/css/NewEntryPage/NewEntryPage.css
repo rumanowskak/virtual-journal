@@ -2,6 +2,11 @@
 {
     height: fit-content;
     width: 100%;
+
+}
+
+.new-entry-page form{
+    width:100%;
     display: grid;
     grid-template-rows: 300px 300px 500px 300px 400px ;
     grid-template-columns: 5% 45% 45% 5%;
@@ -162,7 +167,7 @@
     grid-column-start: 3;
     grid-column-end: 4;
     height: 100%;
-    width: 100%;
+    /*width: 100%;*/
     color: #6B6B6B;
     font-size: 30px;
     padding-left: 26%;
@@ -311,3 +316,150 @@
     height: 150px;
 }
 
+.lamp-icon
+{
+    position:absolute;
+    top:0;
+    width: 160px;
+    height: 250px;
+    left:50%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.lamp-icon1
+{
+    position:absolute;
+    top:0;
+    width: 75px;
+    height: 120px;
+    left:0.5%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.lamp-icon2
+{
+    position:absolute;
+    top:0;
+    width: 100px;
+    height: 150px;
+    right:0;
+    opacity: 0.6;
+}
+
+
+.lamp-icon3
+{
+    position:absolute;
+    top:0;
+    width: 50px;
+    height: 80px;
+    left:60%;
+    opacity: 0.2;
+}
+
+
+.lamp-icon4
+{
+    position:absolute;
+    top:0;
+    width: 50px;
+    height: 80px;
+    left:30%;
+    opacity: 0.6;
+}
+
+.lamp-icon5 
+{
+    position:absolute;
+    top:0;
+    width: 175px;
+    height: 275px;
+    left:15%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.lamp-icon6 
+{
+    position:absolute;
+    top:0;
+    width: 100px;
+    height: 150px;
+    left:42%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.lamp-icon7 
+{
+    position:absolute;
+    top:0;
+    width: 60px;
+    height: 90px;
+    left:85%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+.save-the-day{
+    position: absolute;
+    top:13.5%;
+    left:49.5%;
+    font-size: 20px;
+    font-family: 'Gotham Medium';
+    color: #886e5c;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #f9c3a1;
+    -webkit-box-shadow:6px 12px 8px -1px rgba(211, 211, 211, 1);
+    -moz-box-shadow: 6px 12px 8px -1px rgba(211, 211, 211, 1);
+    box-shadow:  6px 12px 8px -1px rgba(211, 211, 211, 1);
+    border: 1px solid #fcb487;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px #9c8d81;
+    transition: 0.5s;
+
+}
+
+
+.save-the-day input{
+    border:0px;
+    font-size: 20px;
+    font-family: 'Gotham Medium';
+    color: #886e5c;
+    background-color: #f9c3a1;
+
+}
+
+
+
+.save-the-day:hover{
+    position: absolute;
+    /* top:13.5%;
+    left:49%; */
+    font-size: 20px;
+    font-family: 'Gotham Medium';
+    color: #886e5c;
+    /* width: 200px;
+    height: 200px; */
+    border-radius: 50%;
+    background-color: #f9c3a1;
+    -webkit-box-shadow:0px 10px 35px 20px rgb(243, 208, 192),
+    6px 12px 8px -1px rgba(211, 211, 211, 1);
+    -moz-box-shadow:  0px 10px 35px 20px rgb(243, 208, 192),
+    6px 12px 8px -1px rgba(211, 211, 211, 1);
+    box-shadow:  0px 10px 35px 20px rgb(243, 208, 192),
+    6px 12px 8px -1px rgba(211, 211, 211, 1);
+    border: 1px solid #fcb487;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px #9c8d81;
+    transition: 0.5s;
+}
