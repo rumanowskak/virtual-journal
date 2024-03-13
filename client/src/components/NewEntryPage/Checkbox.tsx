@@ -8,19 +8,24 @@ interface CheckboxInterface
     isItChecked?:boolean;
     setIsItChecked?:Function;
     setAnotherChecked?:Function;
+    data?:any;
+    setData?:Function;
+    setChecked?:Function
 }
 
-const Checkbox = ({ label, customLabel, isItChecked, setIsItChecked, setAnotherChecked }:CheckboxInterface) => {
+const Checkbox = ({ label, customLabel, isItChecked, setIsItChecked, setAnotherChecked,data,setData,setChecked }:CheckboxInterface) => {
   const [isChecked, setIsChecked] = useState(false);
 
 
   function handleCheckbox(){
-    if(setIsItChecked!== undefined && setAnotherChecked !== undefined)
+    if(setIsItChecked!== undefined && setAnotherChecked !== undefined && setChecked!==undefined)
     {
-        setIsItChecked((prev:any) => !prev);
+        setIsItChecked(!isItChecked);
         setAnotherChecked(false);
+        setChecked(!isItChecked);
+
     }else{
-        setIsChecked((prev)=> !prev);
+        setIsChecked((prev:any)=> !prev);
     }
     
   }
@@ -30,7 +35,7 @@ const Checkbox = ({ label, customLabel, isItChecked, setIsItChecked, setAnotherC
       <label>
         <input type="checkbox" checked={(isItChecked === undefined)? isChecked : isItChecked} onChange={handleCheckbox}/>
         {label && <span>{label}</span>}
-        {customLabel && <input type="text"></input>}
+        {customLabel && setData && <input type="text" value={data} onChange={(e:any)=>{setData(e.target.value)}}></input>}
       </label>
     </div>
   );
