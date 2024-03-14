@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose")
 const User = require("./models/users/user")
+const Entry = require("./models/entries/entry")
+
 // const session = require('express-session');
 
 const app = express();
@@ -84,3 +86,18 @@ app.post("/api/users/login" , (req,res) =>{
         res.status(400).json({ error });
       }
 });
+
+
+app.post("/api/entry", (req,res) =>{
+    const entry = new Entry(req.body);
+    entry.save()
+        .then((result) =>{
+            res.status(201).send({
+                message: "Entry Created Successfully",
+                result,
+              });
+        })
+        .catch((err)=>{
+            res.status(400);
+        })
+})
