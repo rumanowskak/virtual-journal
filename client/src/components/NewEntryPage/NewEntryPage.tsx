@@ -89,8 +89,22 @@ function NewEntryPage() {
       function handleSubmit(e:any)
       {
         e.preventDefault();
-        console.log(data);
-        navigate('/home');
+        fetch('/api/entries',
+        {
+          method:"POST",
+          headers: {
+            Accept: '*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }
+      )
+      .then(res => {
+          navigate('/home');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
       }
 
       useEffect(()=>{

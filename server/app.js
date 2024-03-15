@@ -88,16 +88,22 @@ app.post("/api/users/login" , (req,res) =>{
 });
 
 
-app.post("/api/entry", (req,res) =>{
+app.post("/api/entries", (req,res) =>{
+    console.log('in entry post:req.body' + req.body);
+    console.log('in entry post:req.body' + req.body);
+
     const entry = new Entry(req.body);
+    console.log('entry:' + entry);
     entry.save()
         .then((result) =>{
+            console.log(result);
             res.status(201).send({
                 message: "Entry Created Successfully",
                 result,
               });
         })
         .catch((err)=>{
+            console.error(err);
             res.status(400);
         })
 })
