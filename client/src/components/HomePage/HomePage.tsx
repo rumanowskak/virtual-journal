@@ -8,8 +8,9 @@ import Entry from './Entry';
 function HomePage() {
 
     const user = useRecoilValue(UserState);
-    const numbers = ["1","2","3","4","5","6"];
     const [entries,setEntries] = useState([{}]);
+    const [todaysEntryBoolean,setTodaysEntryBoolean] = useState(false);
+    const [todaysEntry,setTodaysEntry] = useState({});
 
     function getDate() {
         const today = new Date();
@@ -42,6 +43,18 @@ function HomePage() {
         })
         .then((data) =>{
             setEntries(data.result.slice(0,6));
+            if(data.result.some((entry:any)=>entry.date == getDate()))
+            {
+                setTodaysEntryBoolean(true);
+                setTodaysEntry(data.result.find((entry:any)=>entry.date == getDate()));
+                setEntries(data.result.filter((entry:any)=>entry.date != getDate()));
+
+            }else
+            {
+                setTodaysEntryBoolean(false);
+
+            }
+
         })
         .catch((error) => {
             console.error(error);
@@ -52,7 +65,8 @@ function HomePage() {
       <div className="home-page">
         <div className='home-page-header'>
             <div className='home-page-header-todays-entry'>
-                <AddNewEntryPanel/>
+                {!todaysEntryBoolean && <AddNewEntryPanel/>}
+                {todaysEntryBoolean && <Entry entry={todaysEntry}/>}
             </div>
             <div className='home-page-header-text'>
                 <div className='home-page-header-date'>
