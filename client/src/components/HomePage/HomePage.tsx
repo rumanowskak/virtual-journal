@@ -4,6 +4,9 @@ import { UserState } from '../../atoms/User';
 import { useRecoilValue } from 'recoil';
 import { useEffect, useState } from 'react';
 import Entry from './Entry';
+import BookMarkIcon from '../../assets/images/bookmark.png'
+import LogOutIcon from '../../assets/images/log-out (1).png'
+
 
 function HomePage() {
 
@@ -11,6 +14,8 @@ function HomePage() {
     const [entries,setEntries] = useState([]);
     const [todaysEntryBoolean,setTodaysEntryBoolean] = useState(false);
     const [todaysEntry,setTodaysEntry] = useState({});
+    const [navbar,setNavbar] = useState(false);
+    const [bookmarkClass,setBookMarkClass] = useState("bookmark-icon-no-navbar");
 
     function getDate() {
         const today = new Date();
@@ -62,9 +67,25 @@ function HomePage() {
         });
       },[])
 
+      function handleBookMarkIcon(){
+        if(bookmarkClass == "bookmark-icon-no-navbar")
+        {
+            setBookMarkClass("bookmark-icon-navbar");
+        }
+        else{
+            setBookMarkClass("bookmark-icon-no-navbar");
+        }
+        setNavbar((prev)=>!prev);
+      }
+
     return (
       <div className="home-page">
+        {navbar && 
+        <div className="navbar">
+            <img className="log-out-icon" src={LogOutIcon}></img>
+        </div>}
         <div className='home-page-header'>
+            <img className={bookmarkClass} onClick={handleBookMarkIcon} src={BookMarkIcon}></img>
             <div className='home-page-header-todays-entry'>
                 {!todaysEntryBoolean && <AddNewEntryPanel/>}
                 {todaysEntryBoolean && <Entry entry={todaysEntry}/>}
