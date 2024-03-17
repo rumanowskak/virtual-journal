@@ -107,3 +107,17 @@ app.post("/api/entries", (req,res) =>{
             res.status(400);
         })
 })
+
+app.get("/api/entries" ,(req,res)=>{
+    Entry.find()
+        .then((result) =>{
+            console.log(result);
+            res.status(200).send({
+                result
+            })
+        })
+        .catch((err)=>{
+            res.status(400);
+            console.error(err);
+        })
+});

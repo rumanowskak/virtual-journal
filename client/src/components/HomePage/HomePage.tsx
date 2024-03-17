@@ -2,13 +2,14 @@ import '../../css/HomePage/HomePage.css'
 import AddNewEntryPanel from './AddNewEntryPanel';
 import { UserState } from '../../atoms/User';
 import { useRecoilValue } from 'recoil';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Entry from './Entry';
 
 function HomePage() {
 
     const user = useRecoilValue(UserState);
-    const numbers = ["1","2","3","4","5","6"]
+    const numbers = ["1","2","3","4","5","6"];
+    const [entries,setEntries] = useState([{}]);
 
     function getDate() {
         const today = new Date();
@@ -35,7 +36,16 @@ function HomePage() {
 
 
       useEffect(()=>{
-        //fetch 
+        fetch("/api/entries" )
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) =>{
+            setEntries(data.result.slice(0,6));
+        })
+        .catch((error) => {
+            console.error(error);
+        });
       },[])
 
     return (
@@ -54,11 +64,11 @@ function HomePage() {
             </div>
         </div>
         <div className='home-page-main-content'>
-            { numbers.map((id)=>
-                <div className='entry-item' key={id}>
-                    <Entry/>
+            {entries && entries.map((entry:any)=>
+                <div className='entry-item' key={entry.id}>
+                    <Entry entry={entry}/>
                 </div>
-                )}
+            )}
         </div>
       </div>
     );
