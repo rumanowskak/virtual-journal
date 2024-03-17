@@ -10,9 +10,18 @@ const entrySchema = new Schema({
         required:true
     },
     top_priorities: {
-        priority_1:String,
-        priority_2:String,
-        priority_3:String
+        priority_1:{
+            label:String,
+            checked:Boolean
+        },
+        priority_2:{
+            label:String,
+            checked:Boolean
+        },
+        priority_3:{
+            label:String,
+            checked:Boolean
+        }
     },
     gratitude: {
         gratitude_1:String,
@@ -23,12 +32,30 @@ const entrySchema = new Schema({
     mood:String,
     emotions:[],
     tasks:{
-        task_1:String,
-        task_2:String,
-        task_3:String,
-        task_4:String,
-        task_5:String,
-        task_6:String
+        task_1:{
+            label:String,
+            checked:Boolean
+        },
+        task_2:{
+            label:String,
+            checked:Boolean
+        },
+        task_3:{
+            label:String,
+            checked:Boolean
+        },
+        task_4:{
+            label:String,
+            checked:Boolean
+        },
+        task_5:{
+            label:String,
+            checked:Boolean
+        },
+        task_6:{
+            label:String,
+            checked:Boolean
+        }
     },
     food:{
         breakfast:String,
