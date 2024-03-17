@@ -22,7 +22,7 @@ const entrySchema = new Schema({
             label:String,
             checked:Boolean
         }
-    },
+},
     gratitude: {
         gratitude_1:String,
         gratitude_2:String,
@@ -72,8 +72,8 @@ const entrySchema = new Schema({
             water_8:String
         }
     },
-    exersise:{
-        exersiseDay: Boolean,
+    exercise:{
+        exerciseDay: Boolean,
         restDay:Boolean,
         activity:String,
         duration:{

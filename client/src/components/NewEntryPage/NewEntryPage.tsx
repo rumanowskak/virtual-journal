@@ -261,13 +261,13 @@ function NewEntryPage() {
             </div>
             <div className='top-priorities'>
                 <div className='priority'>
-                    <Checkbox customLabel={true} data={data.top_priorities.priority_1} setData={handleLabelPriority1} setChecked={handleCheckedPriority1}/>
+                    <Checkbox customLabel={true} data={data.top_priorities.priority_1.label} setData={handleLabelPriority1} setChecked={handleCheckedPriority1}/>
                 </div>
                 <div className='priority'>
-                    <Checkbox customLabel={true} data={data.top_priorities.priority_2} setData={handleLabelPriority2} setChecked={handleCheckedPriority2}/>
+                    <Checkbox customLabel={true} data={data.top_priorities.priority_2.label} setData={handleLabelPriority2} setChecked={handleCheckedPriority2}/>
                 </div>
                 <div className='priority'>
-                    <Checkbox customLabel={true} data={data.top_priorities.priority_3} setData={handleLabelPriority3} setChecked={handleCheckedPriority3}/>
+                    <Checkbox customLabel={true} data={data.top_priorities.priority_3.label} setData={handleLabelPriority3} setChecked={handleCheckedPriority3}/>
                 </div>
             </div>
         </div>
@@ -306,22 +306,22 @@ function NewEntryPage() {
             </div>
             <div className='tasks'>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_1} setData={handleLabelTask1} setChecked={handleCheckedTask1}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_1.label} setData={handleLabelTask1} setChecked={handleCheckedTask1}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_2} setData={handleLabelTask2} setChecked={handleCheckedTask2}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_2.label} setData={handleLabelTask2} setChecked={handleCheckedTask2}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_3} setData={handleLabelTask3} setChecked={handleCheckedTask3}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_3.label} setData={handleLabelTask3} setChecked={handleCheckedTask3}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_4} setData={handleLabelTask4} setChecked={handleCheckedTask4}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_4.label} setData={handleLabelTask4} setChecked={handleCheckedTask4}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_5} setData={handleLabelTask5} setChecked={handleCheckedTask5}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_5.label} setData={handleLabelTask5} setChecked={handleCheckedTask5}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_6} setData={handleLabelTask6} setChecked={handleCheckedTask6}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_6.label} setData={handleLabelTask6} setChecked={handleCheckedTask6}/>
                 </div>
             </div>
         </div>
