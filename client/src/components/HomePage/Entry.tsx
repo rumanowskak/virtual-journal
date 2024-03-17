@@ -7,15 +7,15 @@ import ExerciseIcon from '../../assets/images/gym.png'
 
 interface EntryInterface
 {
-
+    entry:any;
 }
 
-function Entry() {
+function Entry({entry}:EntryInterface) {
     return (
       <div className="entry">
         <div className='entry-left'>
             <div className='entry-date'>
-                17.02.2024
+                {entry.date}
             </div>
             <div className='entry-additional-info'>
                 <img src={GoalIcon}></img>
