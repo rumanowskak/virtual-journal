@@ -8,7 +8,7 @@ import Entry from './Entry';
 function HomePage() {
 
     const user = useRecoilValue(UserState);
-    const [entries,setEntries] = useState([{}]);
+    const [entries,setEntries] = useState([]);
     const [todaysEntryBoolean,setTodaysEntryBoolean] = useState(false);
     const [todaysEntry,setTodaysEntry] = useState({});
 
@@ -42,6 +42,7 @@ function HomePage() {
             return res.json();
         })
         .then((data) =>{
+            console.log(data);
             setEntries(data.result.slice(0,6));
             if(data.result.some((entry:any)=>entry.date == getDate()))
             {
