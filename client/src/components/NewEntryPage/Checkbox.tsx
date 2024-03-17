@@ -18,14 +18,19 @@ const Checkbox = ({ label, customLabel, isItChecked, setIsItChecked, setAnotherC
 
 
   function handleCheckbox(){
-    if(setIsItChecked!== undefined && setAnotherChecked !== undefined && setChecked!==undefined)
+    if(setIsItChecked!== undefined && setAnotherChecked !== undefined)
     {
         setIsItChecked(!isItChecked);
         setAnotherChecked(false);
-        setChecked(!isItChecked);
 
-    }else{
+    }else
+    {
         setIsChecked((prev:any)=> !prev);
+    }
+    if(setChecked!==undefined)
+    {
+      setChecked(!isItChecked);
+
     }
     
   }

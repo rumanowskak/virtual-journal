@@ -16,9 +16,18 @@ function NewEntryPage() {
     const [data, setData] = useState({
         date:'',
         top_priorities:{
-            priority_1:'',
-            priority_2:'',
-            priority_3:''
+            priority_1:{
+                label:'',
+                checked:false
+            },
+            priority_2:{
+                label:'',
+                checked:false
+            },
+            priority_3:{
+                label:'',
+                checked:false
+            }
         },
         gratitude:{
             gratitude_1:'',
@@ -29,12 +38,30 @@ function NewEntryPage() {
         mood:'',
         emoticons:[],
         tasks:{
-            task_1:'',
-            task_2:'',
-            task_3:'',
-            task_4:'',
-            task_5:'',
-            task_6:''
+            task_1:{
+                label:'',
+                checked:false
+            },
+            task_2:{
+                label:'',
+                checked:false
+            },
+            task_3:{
+                label:'',
+                checked:false
+            },
+            task_4:{
+                label:'',
+                checked:false
+            },
+            task_5:{
+                label:'',
+                checked:false
+            },
+            task_6:{
+                label:'',
+                checked:false
+            }
         },
         food:{
             breakfast:'',
@@ -113,49 +140,97 @@ function NewEntryPage() {
       },[])
 
 
-      function handlePriority1(priority:string)
+      function handleLabelPriority1(priority:string)
       {
-        setData({...data,top_priorities:{...data.top_priorities,priority_1:priority}});
+        setData({...data,top_priorities:{...data.top_priorities,priority_1:{...data.top_priorities.priority_1,label:priority}}});
       }
 
-      function handlePriority2(priority:string)
+      function handleCheckedPriority1(checked:boolean)
       {
-        setData({...data,top_priorities:{...data.top_priorities,priority_2:priority}});
+        setData({...data,top_priorities:{...data.top_priorities,priority_1:{...data.top_priorities.priority_1,checked:checked}}});
       }
 
-      function handlePriority3(priority:string)
+
+      function handleLabelPriority2(priority:string)
       {
-        setData({...data,top_priorities:{...data.top_priorities,priority_3:priority}});
+        setData({...data,top_priorities:{...data.top_priorities,priority_2:{...data.top_priorities.priority_2,label:priority}}});
+      }
+
+      function handleCheckedPriority2(checked:boolean)
+      {
+        setData({...data,top_priorities:{...data.top_priorities,priority_2:{...data.top_priorities.priority_2,checked:checked}}});
+      }
+
+      function handleLabelPriority3(priority:string)
+      {
+        setData({...data,top_priorities:{...data.top_priorities,priority_3:{...data.top_priorities.priority_3,label:priority}}});
+      }
+
+      function handleCheckedPriority3(checked:boolean)
+      {
+        setData({...data,top_priorities:{...data.top_priorities,priority_3:{...data.top_priorities.priority_3,checked:checked}}});
       }
 
       
-      function handleTask1(task:string)
+      function handleLabelTask1(task:string)
       {
-        setData({...data,tasks:{...data.tasks,task_1:task}});
-      }
-      function handleTask2(task:string)
-      {
-        setData({...data,tasks:{...data.tasks,task_2:task}});
+        setData({...data,tasks:{...data.tasks,task_1:{...data.tasks.task_1,label:task}}});
       }
 
-      function handleTask3(task:string)
+
+      function handleCheckedTask1(checked:boolean)
       {
-        setData({...data,tasks:{...data.tasks,task_3:task}});
+        setData({...data,tasks:{...data.tasks,task_1:{...data.tasks.task_1,checked:checked}}});
       }
 
-      function handleTask4(task:string)
+      function handleLabelTask2(task:string)
       {
-        setData({...data,tasks:{...data.tasks,task_4:task}});
+        setData({...data,tasks:{...data.tasks,task_2:{...data.tasks.task_2,label:task}}});
       }
 
-      function handleTask5(task:string)
+      function handleCheckedTask2(checked:boolean)
       {
-        setData({...data,tasks:{...data.tasks,task_5:task}});
+        setData({...data,tasks:{...data.tasks,task_2:{...data.tasks.task_2,checked:checked}}});
       }
 
-      function handleTask6(task:string)
+      function handleLabelTask3(task:string)
       {
-        setData({...data,tasks:{...data.tasks,task_6:task}});
+        setData({...data,tasks:{...data.tasks,task_3:{...data.tasks.task_3,label:task}}});
+      }
+
+      function handleCheckedTask3(checked:boolean)
+      {
+        setData({...data,tasks:{...data.tasks,task_3:{...data.tasks.task_3,checked:checked}}});
+      }
+
+      function handleLabelTask4(task:string)
+      {
+        setData({...data,tasks:{...data.tasks,task_4:{...data.tasks.task_4,label:task}}});
+      }
+
+      function handleCheckedTask4(checked:boolean)
+      {
+        setData({...data,tasks:{...data.tasks,task_4:{...data.tasks.task_4,checked:checked}}});
+      }
+
+      function handleLabelTask5(task:string)
+      {
+        setData({...data,tasks:{...data.tasks,task_5:{...data.tasks.task_5,label:task}}});
+      }
+
+      function handleCheckedTask5(checked:boolean)
+      {
+        setData({...data,tasks:{...data.tasks,task_5:{...data.tasks.task_5,checked:checked}}});
+      }
+
+      function handleLabelTask6(task:string)
+      {
+        setData({...data,tasks:{...data.tasks,task_6:{...data.tasks.task_6,label:task}}});
+      }
+
+      function handleCheckedTask6(checked:boolean)
+      {
+        setData({...data,tasks:{...data.tasks,task_6:{...data.tasks.task_6,checked:checked}}});
       }
 
     return (
@@ -186,13 +261,13 @@ function NewEntryPage() {
             </div>
             <div className='top-priorities'>
                 <div className='priority'>
-                    <Checkbox customLabel={true} data={data.top_priorities.priority_1} setData={handlePriority1}/>
+                    <Checkbox customLabel={true} data={data.top_priorities.priority_1} setData={handleLabelPriority1} setChecked={handleCheckedPriority1}/>
                 </div>
                 <div className='priority'>
-                    <Checkbox customLabel={true} data={data.top_priorities.priority_2} setData={handlePriority2}/>
+                    <Checkbox customLabel={true} data={data.top_priorities.priority_2} setData={handleLabelPriority2} setChecked={handleCheckedPriority2}/>
                 </div>
                 <div className='priority'>
-                    <Checkbox customLabel={true} data={data.top_priorities.priority_3} setData={handlePriority3}/>
+                    <Checkbox customLabel={true} data={data.top_priorities.priority_3} setData={handleLabelPriority3} setChecked={handleCheckedPriority3}/>
                 </div>
             </div>
         </div>
@@ -231,22 +306,22 @@ function NewEntryPage() {
             </div>
             <div className='tasks'>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_1} setData={handleTask1}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_1} setData={handleLabelTask1} setChecked={handleCheckedTask1}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_2} setData={handleTask2}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_2} setData={handleLabelTask2} setChecked={handleCheckedTask2}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_3} setData={handleTask3}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_3} setData={handleLabelTask3} setChecked={handleCheckedTask3}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_4} setData={handleTask4}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_4} setData={handleLabelTask4} setChecked={handleCheckedTask4}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_5} setData={handleTask5}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_5} setData={handleLabelTask5} setChecked={handleCheckedTask5}/>
                 </div>
                 <div className='task'>
-                    <Checkbox customLabel={true} data={data.tasks.task_6} setData={handleTask6}/>
+                    <Checkbox customLabel={true} data={data.tasks.task_6} setData={handleLabelTask6} setChecked={handleCheckedTask6}/>
                 </div>
             </div>
         </div>
