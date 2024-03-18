@@ -1,0 +1,78 @@
+.log-out-panel
+{
+    width: 50%;
+    height:30%;
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    position:relative;
+}
+.log-out-panel::before{
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    background: #1c1c1c;
+    content:"";
+    position: absolute;
+    top: 0px;    
+    border-radius: 50px;
+}
+
+.log-out-panel .title{
+    width: 100%;
+    height:30%;
+    font-family: 'Gotham Medium';
+    font-size:22px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+
+.log-out-panel .log-out-panel-buttons{
+    width: 100%;
+    height:70%;
+    font-size:15px;
+    color: #1c1c1c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-out-panel .log-out-panel-buttons .log-out-button-container{
+    width: 50%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-out-panel .log-out-panel-buttons .log-out-button-container .log-out-button{
+    width: 50%;
+    height:50%;
+    border: 4px solid #1c1c1c;
+    background-color: white;
+    border-radius: 40px;
+    font-family: 'Gotham Medium';
+
+}
+
+
+.log-out-panel .log-out-panel-buttons .cancel-button-container{
+    width: 50%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-out-panel .log-out-panel-buttons .cancel-button-container .cancel-button{
+    width: 50%;
+    height:50%;
+    border: 4px solid #1c1c1c;
+    background-color: white;
+    border-radius: 40px;
+    font-family: 'Gotham Medium';
+
+}

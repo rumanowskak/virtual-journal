@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Entry from './Entry';
 import BookMarkIcon from '../../assets/images/bookmark.png'
 import LogOutIcon from '../../assets/images/log-out (1).png'
+import LogOutPanel from './LogOutPanel';
 
 
 function HomePage() {
@@ -16,6 +17,7 @@ function HomePage() {
     const [todaysEntry,setTodaysEntry] = useState({});
     const [navbar,setNavbar] = useState(false);
     const [bookmarkClass,setBookMarkClass] = useState("bookmark-icon-no-navbar");
+    const [logOutPanelVisibility, setLogOutPanelVisibility] = useState(false);
 
     function getDate() {
         const today = new Date();
@@ -82,7 +84,7 @@ function HomePage() {
       <div className="home-page">
         {navbar && 
         <div className="navbar">
-            <img className="log-out-icon" src={LogOutIcon}></img>
+            <img className="log-out-icon" onClick={()=>setLogOutPanelVisibility(true)}  src={LogOutIcon}></img>
         </div>}
         <div className='home-page-header'>
             <img className={bookmarkClass} onClick={handleBookMarkIcon} src={BookMarkIcon}></img>
@@ -95,7 +97,7 @@ function HomePage() {
                     {getDate()}
                 </div>
                 <div className='home-page-header-title'>
-                    Hello {user.username}
+                    Hello {user && user.username}
                 </div>
             </div>
         </div>
@@ -106,6 +108,9 @@ function HomePage() {
                 </div>
             )}
         </div>
+        {logOutPanelVisibility && <div className='log-out-pop-up'>
+            <LogOutPanel setLogOutPanelVisibility={setLogOutPanelVisibility}/>
+        </div>}
       </div>
     );
   }
